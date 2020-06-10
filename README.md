@@ -12,5 +12,8 @@ The programming language used is python with the required libraries:
 - argparse 
 - numpy
 
+How to run :
+>python main.py -i Samplenormal.jpg
+
 Support us to share, develop, and implement this program.
 Thank you.
