@@ -13,4 +13,4 @@ The programming language used is python with the required libraries:
 - numpy
 
 Support us to share, develop, and implement this program.
-Thank you
+Thank you.
