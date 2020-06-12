@@ -1,10 +1,10 @@
-import argparse
-import cv2
-import numpy as np
-import cv2
-import imutils
-
-import math
+import argparse #For Parsing Command Line Arguments
+import cv2 #For Computer Vision
+import numpy as np #Operate Vectors and Matrix
+import imutils #For Translation, Rotation, Resizing, and Skeletonization
+import math #Operates Funcions
+import sys #System Operation
+import keyboard #Keyboard Operation
 
 cropping = False
  
@@ -47,7 +47,7 @@ def mouse_crop(event, x, y, flags, param):
             cv2.imshow("Cropped", roi)
             imgC = roi
             imgG = cv2.cvtColor(imgC, cv2.COLOR_BGR2GRAY)
-            median = cv2.medianBlur(imgG, 5)
+            median = cv2.medianBlur(imgG, 3)
 
             m = cv2.mean(median)[0]
             Hasil = 0.918183201 + (0.0127839853*m)
@@ -76,7 +76,9 @@ while True:
         cv2.rectangle(i, (x_start, y_start), (x_end, y_end), (255, 0, 0), 2)
         cv2.imshow("image", i)
  
+    if keyboard.is_pressed('Esc'):
+            print("\nyou pressed Esc, so exiting...")
+            sys.exit(0)
     cv2.waitKey(1)
- 
 # close all open windows
 cv2.destroyAllWindows()
