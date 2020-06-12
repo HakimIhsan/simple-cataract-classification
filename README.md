@@ -1,6 +1,6 @@
 #Simple Cataract Classification
 
-This project is used to classify eye pupil images into three types :
+This project is used to classify eye-lens images into three types :
 - normal eyes
 - immature cataracts
 - mature cataracts.  
